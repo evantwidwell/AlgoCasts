@@ -8,13 +8,18 @@
 //   vowels('Why?') --> 0
 
 function vowels(str) {
-let iter = 0;
-
-for (let letter of str.toLowerCase()){
-  if(letter === 'a' || letter ==='e'|| letter === 'i'|| letter ==='o' || letter === 'u'){
-    iter++
-  }
-}
-return iter
+const matches = str.match(/[aeiou]/gi)
+return matches ? matches.length : 0
 }
 module.exports = vowels;
+
+// function vowels(str) {
+//   let iter = 0;
+  
+//   for (let letter of str.toLowerCase()){
+//     if(letter === 'a' || letter ==='e'|| letter === 'i'|| letter ==='o' || letter === 'u'){
+//       iter++
+//     }
+//   }
+//   return iter
+//   }
